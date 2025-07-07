@@ -65,6 +65,7 @@ ipython = "^9.3.0"
 shellingham = "^1.5.4"
 ipyleaflet = "^0.20.0"
 dash = "^3.1.1"
+gender-guesser = "^0.4.0"
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.0.0"
 ipykernel = "^6.25.0"

@@ -1363,6 +1363,18 @@ files = [
 speedup = ["python-levenshtein (>=0.12)"]
 
 [[package]]
+name = "gender-guesser"
+version = "0.4.0"
+description = "Get the gender from first name."
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "gender-guesser-0.4.0.tar.gz", hash = "sha256:1591c14592805ca7da06a46d5f7202511f7cb87547049a68dfccbeedb879f31b"},
+    {file = "gender_guesser-0.4.0-py2.py3-none-any.whl", hash = "sha256:7cb01ce5d8d43b94573498bc02c959b622872abd399622ca67d1b73ba6e7e222"},
+]
+
+[[package]]
 name = "geocoder"
 version = "1.38.1"
 description = "Geocoder is a simple and consistent geocoding library."
@@ -6748,4 +6760,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.14"
-content-hash = "53c80dd7c04b95a2ce2579d1a19cc16422e42a247ad774c28948bda8637c9dab"
+content-hash = "63771f1d06a107f3ea506b544a61be9f76ed08963e7b245d8653e48495de4e58"

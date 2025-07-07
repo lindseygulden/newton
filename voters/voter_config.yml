@@ -1,0 +1,30 @@
+# Put this config file in same directory as voter.py for the voter.py Dash app to run
+#
+# --- Where to find the geojson containing voter information
+voter_locations: /Users/lindseygulden/Desktop/voters.geojson
+# --- Voter subsetting for mapping
+ward: 
+  - 6
+  - 5
+include_politics: # always include these
+  - left
+#  - right
+#  - middle/unclear
+exclude_politics:  # never include these
+  - right
+include_boolean:  # from the neither include nor exclude bunch for politics, if a person is one of these, include them
+  - educator
+  - helping
+#  - women
+exclude_boolean: # exclude from the 'includes' this set
+  - finance
+  - muckity_muck
+  - big_single_family
+# --- Where to store the output files (and what to call them)
+output_file_path: /Users/lindseygulden/Desktop/
+output_file_prefix: selected_voters_
+#
+# --- Map display parameters
+# hover_name is the column name from the geodataframe stored at voter_locations (above) 
+# that will show on the dash map
+hover_name: fullname

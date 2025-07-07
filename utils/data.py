@@ -1,4 +1,4 @@
-""" Assorted functions for manipuling data, strings, etc."""
+"""Assorted functions for manipuling data, strings, etc."""
 
 from typing import Literal, List, Union
 import pandas as pd
@@ -58,3 +58,28 @@ def zero_pad(
     if front_or_back == "front":
         return "0" * (max_string_length - len(str(x))) + str(x)
     return str(x) + "0" * (max_string_length - len(str(x)))
+
+
+def contains_text(s: str, text_list: List[str], match_case: bool = False) -> bool:
+    """Returns true if text string contains any of the substrings in a list
+    Args:
+        s: string within which to search for substrings
+        text_list: list of substrings
+        match_case: set to True if you want it to match case when searching
+    Returns:
+        True if one of the text_list substrings is in string s, False otherwise
+    """
+    if not isinstance(s, str):
+        raise TypeError(f"First argument must be string. {s} is not a string.")
+    if not isinstance(text_list, list):
+        raise TypeError("Second argument must be a list of strings (it is not a list)")
+    for t in text_list:
+        if not isinstance(t, str):
+            TypeError(f"All list members must be strings. {t} is not a string.")
+        if match_case:
+            if t in s:
+                return True
+        else:
+            if t.lower() in s.lower():
+                return True
+    return False
