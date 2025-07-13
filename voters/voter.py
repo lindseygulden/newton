@@ -6,6 +6,7 @@ import pandas as pd
 from utils.io import yaml_to_dict
 import click
 import logging
+from math import ceil
 
 
 logging.basicConfig(level=logging.INFO)
@@ -22,11 +23,10 @@ def voter(config_path):
         f" --- Initializing Dash app using Ward {config['ward']} from voter data at {config['voter_locations']}"
     )
 
-    voter_gdf = gpd.read_file(config["voter_locations"])
+    # voter_gdf = gpd.read_file(config["voter_locations"])
 
-    # Add unique ID
-    voter_df = pd.DataFrame(voter_gdf.drop(columns="geometry"))
-
+    # voter_df = pd.DataFrame(voter_gdf.drop(columns="geometry"))
+    voter_df = pd.read_csv(config["voter_locations"])
     # get the right ward
     voter_df = voter_df.loc[(voter_df.ward.isin(config["ward"]))]
 
@@ -153,11 +153,25 @@ def voter(config_path):
         df = pd.DataFrame(current_data)
         selected_df = df[df["uid"].isin(selected_ids)]
 
+        write_df = selected_df.sort_values(
+            by=["fullstname", "number", "age_on_election_day"],
+            ascending=True,
+            inplace=True,
+        )
+
+        write_df = selected_df[config["write_out_cols"]]
         # Write file
         export_count += 1
-        filename = f"{config['output_file_path']}/{config['output_file_prefix']}{export_count}.csv"
-        selected_df.to_csv(filename, index=False)
-        logging.info(f" --- >>> Wrote voter extract to {filename}")
+
+        n_records = len(write_df)
+        n_files = ceil(n_records / config["file_length"])
+        id_start = 0
+        for f in range(n_files):
+            id_end = min(n_records - 1, id_start + config["file_length"] - 1)
+            filename = f"{config['output_file_path']}/{config['output_file_prefix']}{export_count}_{f+1}.csv"
+            write_df.iloc[id_start:id_end, :].to_csv(filename, index=False)
+            id_start = id_end + 1
+            logging.info(f" --- >>> Wrote voter extract to {filename}")
         # Update list of exported IDs
         updated_exported_ids = list(set(exported_ids + selected_ids))
 
