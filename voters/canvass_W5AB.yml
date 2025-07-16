@@ -3,9 +3,16 @@ output_dir: /Users/lindseygulden/Desktop/canvass_lists
 list_generation_id: canvass_set_5AB
 groupby_cols:
 - form_id
+- fullstname
+- number
+- fullname
+write_out_cols:
+- form_id
 - address
 - apt
 - fullname
+- age_on_election_day
+- occupation
 street_col: fullstname
 street_number_col: number
 roads:
@@ -58,10 +65,4 @@ roads:
   - WINSLOW RD:
     - 170
     - 300
-write_out_cols:
-- form_id
-- address
-- apt
-- fullname
-- age_on_election_day
-- occupation
+

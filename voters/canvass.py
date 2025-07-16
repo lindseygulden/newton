@@ -37,9 +37,8 @@ def canvass(config_path):
             else:
                 out_list.append(voters_df.loc[(voters_df[config["street_col"]] == s)])
         out_df = pd.concat(out_list)
-        out_df = out_df[config["write_out_cols"]].sort_values(
-            by=config["groupby_cols"], ascending=True
-        )
+        out_df.sort_values(by=config["groupby_cols"], ascending=True, inplace=True)
+        out_df = out_df[config["write_out_cols"]]
         out_df["canvass_list"] = name
         n = out_df.form_id.nunique()
         out_df.to_csv(
