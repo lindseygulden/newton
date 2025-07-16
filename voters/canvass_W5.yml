@@ -1,0 +1,67 @@
+voter_file: /Users/lindseygulden/Desktop/voters_with_formid.csv
+output_dir: /Users/lindseygulden/Desktop/canvass_lists
+list_generation_id: canvass_set_5AB
+groupby_cols:
+- form_id
+- address
+- apt
+- fullname
+street_col: fullstname
+street_number_col: number
+roads:
+  5A1:
+  - BEACON ST:
+    - 1745
+    - 1913
+  5A4:
+  - IRVINGTON ST
+  - NEHOIDEN RD:
+    - 60
+    - 135
+  - OWAISA RD
+  5A2:
+  - WABAN AVE
+  5A3:
+  - COLLINS RD
+  5A6:
+  - FENWICK RD
+  5A5:
+  - VARICK RD
+  - PONTIAC RD
+  5B1:
+  - CHESTNUT ST:
+    - 620
+    - 745
+  5B2:
+  - AVALON RD
+  5B3.1:
+  - ALLEN AVE
+  5B3.2:
+  - WINSLOW RD:
+    - 80
+    - 140
+  - VAUGHN AVE
+  - CHATHAM RD
+  5B6:
+  - UPLAND RD
+  5B7:
+  - WOODWARD ST:
+    - 60
+    - 215
+  5B5:
+  - CARVER RD
+  - DICKERMAN RD
+  - RANDOLPH ST
+  5B4:
+  - HINCKLEY RD
+  - SELDEN ST
+  - WINSLOW RD:
+    - 170
+    - 300
+write_out_cols:
+- form_id
+- address
+- apt
+- fullname
+- age_on_election_day
+- occupation
