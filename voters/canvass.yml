@@ -1,0 +1,61 @@
+voter_file: /Users/lindseygulden/Desktop/voters_with_formid.csv
+output_dir: /Users/lindseygulden/Desktop/canvass_lists
+list_generation_id: canvass_set_6BC
+groupby_cols:
+- form_id
+- address
+- apt
+- fullname
+street_col: fullstname
+street_number_col: number
+roads:
+  6A1:
+  - BURR RD
+  - ELLISON RD
+  - FENNO RD
+  - MANEMET RD
+  6B1:
+  - KENMORE ST
+  - PINE CREST RD
+  - MORELAND AVE
+  - ALBION PL
+  - NEWBURY ST
+  6B2:
+  - KINGMAN RD
+  - FISHER AVE
+  - WALNUT ST:
+      - 960
+      - 1080 
+  6B3:
+  - SAXON RD
+  - LAKEWOOD RD
+  - NORMAN RD
+  6B4:
+  - HYDE ST
+  6C1:
+  - OXFORD RD
+  6C2:
+  - ROWENA RD
+  - CEDRIC RD
+  - ATHELSTANE RD
+  6C4:
+  - FLORAL ST
+  6C3:
+  - ALLERTON RD:
+    - 130
+    - 200
+  - LAKE AVE:
+    - 215
+    - 300
+  6C5:
+  - GLENWOOD AVE
+  - PARKER ST:
+    - 40
+    - 145
+write_out_cols:
+- form_id
+- address
+- apt
+- fullname
+- age_on_election_day
+- occupation

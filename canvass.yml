@@ -1,0 +1,23 @@
+groupby_cols:
+- form_id
+- address
+- apt
+- fullname
+roads:
+  6A1:
+  - BURR RD
+  - ELLISON RD
+  - FENNO RD
+  - MANAMET RD
+  6B1:
+  - MORELAND AVE
+  - ALBION PL
+  - NEWBURY ST
+  - KENMORE ST
+write_out_cols:
+- form_id
+- address
+- apt
+- fullname
+- age_on_election_day
+- occupation

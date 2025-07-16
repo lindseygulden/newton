@@ -1,18 +1,28 @@
 # Put this config file in same directory as voter.py for the voter.py Dash app to run
 #
 # --- Where to find the geojson containing voter information
-voter_locations: /Users/lindseygulden/Desktop/voters.csv
+voter_locations: /Users/lindseygulden/Desktop/voters_with_formid.csv
 # --- Voter subsetting for mapping
-file_length: 20
+file_length: 20000
 write_out_cols:
-  - wp_address_id
+  - form_id
+  - ward
+  - precinct
+  - fullstname
   - address
   - apt
   - fullname
   - age_on_election_day
   - occupation
 ward: 
+  - 1
+  - 2
+  - 3
+  - 4
   - 6
+  - 5
+  - 7
+  - 8
 include_politics: # always include these
   - left
 #  - right
