@@ -18,6 +18,7 @@ def canvass(config_path):
     config = yaml_to_dict(config_path)
 
     logging.info(f" --- Configuration file read from {config_path}")
+    print(config["voter_file"])
     voters_df = pd.read_csv(config["voter_file"])
 
     df_list = []

@@ -22,10 +22,29 @@ roads:
     - 500
   2A2:
   - OTIS ST
+  2A2.1:
+  - MADISON AVE
   2A3:
   - CALVIN RD
   - FAIRFIELD ST
   - BOLTON RD
+  2A3.1:
+  - PARK PL
+  - CLAFLIN PL
+  - WALNUT PL
+  2A3.2:
+  - CLARENDON ST
+  - HARVARD ST:
+    - 72
+    - 120
+  2A3.3:
+  - CABOT ST:
+    - 266
+    - 400
+  2A4:
+  - FREDERICK RD
+  - CLYDE ST
+  - PULSIFER ST
   5A3:
   - COLLINS RD
   5A6:
