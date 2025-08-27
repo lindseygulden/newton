@@ -1,6 +1,6 @@
-voter_file: /Users/lindseygulden/Desktop/voters_with_formid.csv
+voter_file: /Users/lindseygulden/Desktop/voter_city_with_l2.csv
 output_dir: /Users/lindseygulden/Desktop/canvass_lists
-list_generation_id: canvass_set_2a
+list_generation_id: L2_1
 groupby_cols:
 - form_id
 - fullstname

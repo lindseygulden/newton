@@ -5,10 +5,18 @@ import pandas as pd
 import warnings
 from pathlib import Path
 from utils.io import yaml_to_dict
+import numpy as np
 
 warnings.filterwarnings("ignore")
 
 logging.basicConfig(level=logging.INFO)
+
+
+def convert_to_int(x):
+    try:
+        return int(float(x))
+    except:
+        return np.nan
 
 
 @click.command()
@@ -20,7 +28,9 @@ def canvass(config_path):
     logging.info(f" --- Configuration file read from {config_path}")
     print(config["voter_file"])
     voters_df = pd.read_csv(config["voter_file"])
-
+    voters_df[config["street_number_col"]] = [
+        convert_to_int(x) for x in voters_df[config["street_number_col"]]
+    ]
     df_list = []
     for name, roadlist in config["roads"].items():
         out_list = []

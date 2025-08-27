@@ -1,0 +1,88 @@
+voter_file: /Users/lindseygulden/Desktop/voter_city_with_l2.csv
+output_dir: /Users/lindseygulden/Desktop/canvass_lists
+list_generation_id: L2_1
+groupby_cols:
+- form_id
+- fullstname
+- number
+- fullname
+write_out_cols:
+- form_id
+- address
+- apt
+- fullname
+- age_on_election_day
+- occupation
+street_col: fullstname
+street_number_col: number
+roads:
+  1A1:
+  - FAIR OAKS AVE
+  - BEMIS ST
+  - SCHOFIELD DR
+  - NEVADA ST:
+    - 100
+    - 170
+  1A3:
+  - WYOMING RD
+  1A2:
+  - BROOKDALE RD
+  - NORTH ST:
+    - 56
+    - 130
+  - FESSENDEN ST:
+    - 0
+    - 80
+  1B1:
+  - ALBEMARLE RD:
+    - 296
+    - 354
+  - WILDWOOD AVE
+  - KENSINGTON ST
+  1B2:
+  - WATERTOWN ST:
+    - 736
+    - 756
+  - FAIRWAY DR
+  1B3:
+  - BUNKER LN
+  - WARWICK RD
+  - WALTHAM ST:
+    - 288
+    - 268
+  1B4:
+  - RANDLETT PARK
+  1B5:
+  - ELIOT AVE
+  - COLMAN ST
+  1B6:
+  - WEDGEWOOD RD
+  - HOLDEN RD
+  1B7:
+  - ORCHARD AVE
+  - VINCENT ST
+  - ADELLA AVE
+  1B8:
+  - FURBUSH AVE
+  - DAVIS AVE
+  - EDEN AVE
+  - WATERTOWN ST:
+    - 864
+    - 925
+  3A1:
+  - TAFT AVE
+  - KEYES ST
+  - LODGE RD
+  3A2.1:
+  - CHERRY ST:
+    - 104
+    - 186
+  3A2.2:
+  - CHERRY ST:
+    - 1
+    - 104
+  3A3.1:
+  - FAIRWAY DR
+  3A3.2:
+  - RANDLETT
+  
