@@ -31,6 +31,7 @@ def canvass(config_path):
     voters_df[config["street_number_col"]] = [
         convert_to_int(x) for x in voters_df[config["street_number_col"]]
     ]
+    voters_df[config["street_number_col"]].fillna(-1, inplace=True)
     df_list = []
     for name, roadlist in config["roads"].items():
         out_list = []
@@ -41,8 +42,11 @@ def canvass(config_path):
                 out_list.append(
                     voters_df.loc[
                         (voters_df[config["street_col"]] == streetname)
-                        & (voters_df[config["street_number_col"]] >= numbers[0])
-                        & (voters_df[config["street_number_col"]] <= numbers[1])
+                        & (
+                            (voters_df[config["street_number_col"]] >= numbers[0])
+                            & (voters_df[config["street_number_col"]] <= numbers[1])
+                            | (voters_df[config["street_number_col"]] == -1)
+                        )
                     ]
                 )
             else:
@@ -51,7 +55,7 @@ def canvass(config_path):
         out_df.sort_values(by=config["groupby_cols"], ascending=True, inplace=True)
         out_df = out_df[config["write_out_cols"]]
         out_df["canvass_list"] = name
-        n = out_df.form_id.nunique()
+        n = out_df.address.nunique()
         out_df.to_csv(
             Path(config["output_dir"]) / Path(name + f"_{n}_addresses.csv"), index=False
         )

@@ -16,16 +16,16 @@ write_out_cols:
 street_col: fullstname
 street_number_col: number
 roads:
-  1A1:
+  2D1:
   - FAIR OAKS AVE
   - BEMIS ST
   - SCHOFIELD DR
   - NEVADA ST:
     - 100
     - 170
-  1A3:
+  2D3:
   - WYOMING RD
-  1A2:
+  2D2:
   - BROOKDALE RD
   - NORTH ST:
     - 56
@@ -33,36 +33,36 @@ roads:
   - FESSENDEN ST:
     - 0
     - 80
-  1B1:
+  3D1:
   - ALBEMARLE RD:
     - 296
     - 354
   - WILDWOOD AVE
   - KENSINGTON ST
-  1B2:
+  3D2:
   - WATERTOWN ST:
     - 736
     - 756
   - FAIRWAY DR
-  1B3:
+  3D3:
   - BUNKER LN
   - WARWICK RD
   - WALTHAM ST:
     - 288
     - 268
-  1B4:
+  3D4:
   - RANDLETT PARK
-  1B5:
+  3D5:
   - ELIOT AVE
   - COLMAN ST
-  1B6:
+  3D6:
   - WEDGEWOOD RD
   - HOLDEN RD
-  1B7:
+  3D7:
   - ORCHARD AVE
   - VINCENT ST
   - ADELLA AVE
-  1B8:
+  3D8:
   - FURBUSH AVE
   - DAVIS AVE
   - EDEN AVE
