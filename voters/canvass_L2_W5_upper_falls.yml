@@ -1,0 +1,91 @@
+voter_file: /Users/lindseygulden/Desktop/voter_city_with_l2.csv
+output_dir: /Users/lindseygulden/Desktop/canvass_lists
+list_generation_id: L2_W5_upper_falls
+groupby_cols:
+- form_id
+- fullstname
+- number
+- fullname
+write_out_cols:
+- form_id
+- address
+- apt
+- fullname
+- age_on_election_day
+- occupation
+street_col: fullstname
+street_number_col: number
+roads:
+  5D1:
+  - CHESTNUT ST:
+    - 936
+    - 998
+  - SUMMER ST
+  - BOYLSTON ST:
+    - 1272
+    - 1278
+  - HIGH ST
+  5D2:
+  - BOYLSTON ST:
+    - 1224
+    - 1224
+  - LUCILLE PL
+  - ROCKLAND PL
+  - TAMARAC RD
+  - HICORY CLIFF RD
+  - WHITE PINE RD
+  - HEMLOCK RD
+  5D3:
+  - THURSTON RD
+  - COTTAGE ST
+  - CHAMPA ST
+  - COLUMBIA AVE:
+    - 8
+    - 39
+  5D4:
+  - CIRCUIT AVE
+  - MARGARET RD
+  - CHARLES STFRANCES ST
+  - BOYLSTON ST:
+    - 1006
+    - 1006
+  - ELLIOT ST:
+    - 67
+    - 67
+  5D5:
+  - COLUMBIA AVE:
+    - 65
+    - 65
+  - ELLIOT ST:
+    - 162
+    - 254
+  - MECHANIC ST
+  - CHENEY ST
+  - LINDEN ST
+  - OSSIPEE RD
+  - CLIFF RD
+  - SHAWMUT PARK
+  5D6:
+  - OAK ST:
+    - 20
+    - 66
+  - INDIANA TER
+  - INDIANA CT
+  - PENNSYLVANIA AVE
+  - OHIO AVE
+  - HALE ST
+  - ELLIOT PL
+  - ELLIOT ST:
+    - 296
+    - 321
+  - CHESTNUT ST:
+    - 1077
+    - 1210
+  - KEEFE AVE
+  - RIVER AVE
+
+
+
+
+
+  
